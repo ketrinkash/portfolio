@@ -1,0 +1,763 @@
+@font-face {
+    font-family: 'Natasha';
+    src: url('../fonts/Natasha.eot');
+    src: url('../fonts/Natasha.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Natasha.woff2') format('woff2'),
+        url('../fonts/Natasha.woff') format('woff'),
+        url('../fonts/Natasha.ttf') format('truetype'),
+        url('../fonts/Natasha.svg#Natasha') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 100';
+    src: url('../fonts/MuseoSansCyrl-100.eot');
+    src: url('../fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-100.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-100.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-100.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-100.svg#MuseoSansCyrl-100') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 300';
+    src: url('../fonts/MuseoSansCyrl-300.eot');
+    src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-300') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 900';
+    src: url('../fonts/MuseoSansCyrl-900.eot');
+    src: url('../fonts/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-900.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-900.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-900.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-900.svg#MuseoSansCyrl-900') format('svg');
+}
+
+/* ------ Спецификация ------ */
+
+body {
+    font-family: 'Museo Sans Cyrl 300';
+    font-size: 18px;
+    color: #22241b;
+    padding: 0;
+    letter-spacing: 0.02em;
+    margin: 0;
+    line-height: 1.4em;
+    position: relative;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+div, p, form, input, a, span, button {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Natasha';
+    letter-spacing: 0.12em;
+}
+
+h1 {
+    font-size: 49px;
+    line-height: 1.12em;
+}
+
+h2 {
+    font-size: 37px;
+    color: #22241b;
+}
+
+h3 {
+    color: #888886;
+    font-size:22px ;
+    margin-bottom:30px ;
+}
+
+h4 {
+    font-size: 15px;
+    color: #3a3c34;
+    font-family: 'Museo Sans Cyrl 900';
+    letter-spacing: 0.02em;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+a, button, input {
+    transition: all 0.5s ease;
+}
+
+.d-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+    outline: none;
+}
+
+/* ------ Первый экран ------ */
+
+.header {
+    padding-top: 35px;
+    background:#2a2f2b url('../img/0rBTXO8PjEo.jpg') no-repeat center top / cover;
+}
+
+.header .container {
+    color: #fff;
+    letter-spacing: 0.12em;
+    padding-bottom: 83px;  
+}
+
+.nav {
+    justify-content: space-between;
+    align-items:center;
+}
+
+.nav__menu {
+   width: 355px;
+}
+
+.nav__link {
+    color: #fff;
+    font-family: 'Museo Sans Cyrl 900';
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    z-index: 1;
+    display: block;
+    padding: 15px;
+}
+
+.nav__link:after {
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  background-color: transparent;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+  z-index: -1;
+}
+
+.nav__link:hover {
+  color: #2D2D2D;
+    background-color: #fff;
+}
+
+.nav__link:hover:after {
+  right: 0;
+  left: 0;
+  height: 100%;
+}
+
+
+.link {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Museo Sans Cyrl 300';
+    border-bottom: 1px solid #696b68;
+    padding: 1px 0;
+    letter-spacing: 0.13em;
+}
+
+.link:hover {
+    border: none;
+}
+
+.offer {
+    margin-top:270px ;
+    text-align: center;
+    margin-bottom:264px ;
+}
+
+.offer__text {
+    font-size: 29px;
+    font-family: 'Museo Sans Cyrl 100';
+    margin-top: 22px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.arrow-down {
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+
+
+.arrow-down:hover {
+    opacity: 0.5;
+}
+
+/* ------ Обо мне ------ */
+
+.about {
+    padding-top:88px ;
+}
+
+.about h2 {
+    margin-bottom: 74px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    width: 437px;
+}
+
+
+.back__title {
+    margin-bottom:36px;
+}
+
+
+
+.back__wrap p {
+   margin-bottom: 2.0em; 
+   line-height: 1.8em;
+}
+
+.items {
+    width: 471px;
+}
+
+.merits {
+    position: relative;
+}
+
+.merits img {
+    position: absolute;
+    top: 50%;
+    right: 32%;
+}
+
+.merits__title {
+    opacity: 0.3;
+}
+
+.merits__list {
+    padding-top: 31px;
+    width: 444px;
+    margin: 0 auto;
+    opacity: 0.3;
+}
+
+.merits__item {
+   font-family: 'Museo Sans Cyrl 100'; 
+   text-align: center;
+   width: 126px;
+}
+
+.merits__border {
+   width: 72px;
+   height: 72px;
+   border: 1px solid #3e6534; 
+   text-align: center;
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   position: relative;
+   display: flex;
+    margin: 0 auto;
+}
+
+.merits__line { 
+    color: #204d15;
+    -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   transform: rotate(45deg);
+   font-size: 20px;
+   letter-spacing: 0.12em;
+   margin:  auto;
+}
+
+.merits__border:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border: 1px solid #cddbc3;
+    left: 5px;
+    top: 5px;
+}
+
+.merits__text {
+    font-size: 12px;
+    color: #22241b;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    padding-top: 37px;
+    margin-bottom: 0;
+}
+
+.connect__title {
+    margin-top: 62px;
+    margin-bottom: 28px;
+}
+
+.connect__wrap {
+    width: 465px;
+    align-items: center;
+}
+
+.connect__icon {
+    background:#eef1ed;
+    border-radius: 50%;
+    min-width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    color: #204d15;
+    font-size: 25px;
+}
+
+.connect__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.connect__item {
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.connect__text {
+    color:#60615a;
+    font-size: 14px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.connect__link {
+     font-family: 'Museo Sans Cyrl 300';
+    color: #204d15;
+    font-size:14px ;
+    border-bottom: 1px solid #becbbb;
+    letter-spacing: 0.12em;
+    padding-bottom: 1px;
+    margin-bottom: 8px;
+}
+
+.connect__link:hover {
+    border: none;
+    color: #000;
+}
+
+
+/* ------ Навыки------ */
+
+.skills {
+   padding-top: 68px; 
+}
+
+.skills h2 { 
+    margin-bottom:64px ;
+}
+
+.skills-list__item {
+    display: flex;
+    align-items: center;
+    width: 236px; 
+}
+
+.skills-list__title {
+    letter-spacing: 0.12em;
+}
+
+.skills-list__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #204d15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #204d15;
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 13px;
+    position: relative;
+    margin-right: 26px;
+}
+
+
+.skills-list__icon:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border:1px solid #b9bdb8; 
+}
+
+/* ------ Работы ------ */
+
+.works {
+    padding-top: 87px;
+}
+
+.works h2 {
+    margin-bottom: 62px;   
+}
+
+.works img {
+    display: block; 
+    width: 300px;
+    height: 299px;
+}
+
+.cards__item {
+   
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.cards__overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.56);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*opacity: 0;*/
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards__item:hover .cards__overlay {
+    opacity: 1;
+}
+
+.cards__text {
+    width: 176px;
+    text-align: center;
+}
+
+.cards__title {
+    color: #fff;
+    padding-bottom: 9px;
+    line-height: 0.5em;
+}
+
+.cards__title span{
+        padding-top: 12px;
+    display: inline-block;
+}
+
+.cards__link {
+    color:#fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: 'Museo Sans Cyrl 300';
+}
+
+.cards__link:hover {
+    border: none;
+    opacity: 0.5;
+}
+
+/* ------ Футер ------ */
+
+.footer .container {
+    padding-top:117px; 
+    font-size: 11px; 
+    color: #91928f;
+    padding-bottom: 108px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.foot-list {
+    margin: 20px 0;
+}
+
+.foot-list__item a {
+    margin-right: 5px;
+}
+
+.foot-list li:last-child a {
+    margin-right: 0;
+}
+
+.foot-list__item img {
+    max-width: 25px;
+}
+
+.foot-law {
+    font-size: 10px;
+    border-bottom: 1px solid #91928f;
+    text-transform: none;
+}
+
+.btn-up {
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 auto;
+    position:fixed;
+    right: 15px;
+    bottom: 15px;
+    opacity: 0;
+    background-color: rgb(204, 162, 162);
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  visibility: hidden;
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+#button:active {
+    background-color: rgba(160, 121, 121, 0.904);
+  }
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ------ Media Queries ------ */
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {
+    
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 700px;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    .header {
+        background-position: left top;
+    }
+    
+    .info {
+        flex-direction: column;    
+    }
+    
+    .back {
+        width: auto;
+    }
+
+    .items {
+        margin:0 auto;
+    }
+
+    .skills-list__item {
+        width: auto;
+   }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .cards__item {
+        margin-bottom: 10px;
+   }
+
+   .cards__item img {
+        max-width: 100%;
+   }
+
+     .footer {
+        text-align: center;
+   }
+
+   .foot-list {
+       justify-content: center;
+   }
+
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+    
+    .container {
+        width: 520px;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .offer {
+        margin: 220px 0;
+
+    }
+    
+    .offer__text {
+        font-size: 22px;
+    }
+
+    .nav__menu {
+        display: none;
+    }
+
+    .skills-list {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .skills-list__item {
+        margin-bottom: 8px;
+        width: 210px; 
+   }
+}
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+    
+    .container {
+        width: 90%;
+    }
+    
+    .nav {
+        flex-direction: column;
+    }
+
+    .offer {
+        margin:100px 0;
+    }
+
+    h1 {
+        line-height: 1.12em;
+    }
+
+    .back {
+        width: auto;
+    }
+
+    .items {
+        width: auto;
+    }
+
+   .merits__list {
+        width: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+   }
+
+   .connect__wrap {
+        flex-direction:column;
+        width: auto;
+        justify-content: center;
+   }
+
+   .connect__item {
+        margin-left: 7px;
+        margin-top: 7px;
+   }
+
+   .connect__list {
+        margin: 0 auto;
+        align-items: center;
+   }
+
+    .skills-list {
+        flex-direction: column;
+    }
+
+    .skills-list__item {
+        margin: 0px auto 8px auto; 
+   }
+
+    .cards__item {
+        max-width: 300px;
+        width: 100%;
+    }
+}
